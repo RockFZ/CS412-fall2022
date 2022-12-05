@@ -8,6 +8,8 @@ let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/user');
 let ps3Router = require('./routes/ps3');
 
+
+
 let app = express();
 
 // view engine setup
@@ -23,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/ps3', ps3Router);
 app.use('/users', usersRouter);
-app.use('/index', indexRouter)
+app.use('/', indexRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
